@@ -104,6 +104,9 @@ all:
     persistent: true
   read_only: false
   htmlpurifier_enabled: false
+  csp:
+    response_header: Content-Security-Policy-Report-Only
+    directives: default-src 'self'; font-src 'self'; img-src 'self' https://www.gravatar.com/avatar/; script-src 'self'; style-src 'self' 'nonce'; frame-ancestors 'self';
 EOT;
 
     file_put_contents(_ATOM_DIR.'/apps/qubit/config/app.yml', $app_yml);

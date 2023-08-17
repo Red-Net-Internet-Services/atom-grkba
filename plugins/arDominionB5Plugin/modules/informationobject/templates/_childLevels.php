@@ -6,16 +6,20 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-        <th id="child-identifier-head" style="width: 20%">
+        <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          #child-identifier-head, #child-level-head, #child-date-head { width: 20% }
+          #child-title-head { width: 40% }
+        </style>
+        <th id="child-identifier-head">
           <?php echo __('Identifier'); ?>
         </th>
-        <th id="child-level-head" style="width: 20%">
+        <th id="child-level-head">
           <?php echo __('Level'); ?>
         </th>
-        <th id="child-title-head" style="width: 40%">
+        <th id="child-title-head">
           <?php echo __('Title'); ?>
         </th>
-        <th id="child-date-head" style="width: 20%">
+        <th id="child-date-head">
           <?php echo __('Date'); ?>
         </th>
         <th>

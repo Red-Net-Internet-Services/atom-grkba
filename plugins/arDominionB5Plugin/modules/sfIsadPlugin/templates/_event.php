@@ -7,10 +7,14 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-        <th id="isad-events-type-head" style="width: 25%">
+        <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+              #isad-events-type-head { width: 25% }
+              #isad-events-date-head { width: 30% }
+        </style>
+        <th id="isad-events-type-head">
           <?php echo __('Type'); ?>
         </th>
-        <th id="isad-events-date-head" style="width: 30%">
+        <th id="isad-events-date-head">
           <?php echo __('Date'); ?>
         </th>
         <th id="isad-events-start-head">

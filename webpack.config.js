@@ -79,7 +79,7 @@ module.exports = {
     filename: "js/[name].bundle.[contenthash].js",
     clean: true,
   },
-  devtool: devMode ? "eval-source-map" : "source-map",
+  devtool: "source-map",
   module: {
     rules: [
       {
