@@ -22,13 +22,18 @@
     <table class="table table-bordered mb-0 multi-row">
       <thead class="table-light">
         <tr>
-          <th id="alt-identifiers-type-head" style="width: 30%">
+          <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #alt-identifiers-type-head { width: 30% }
+            #alt-identifiers-identifier-head { width: 35% }
+            #alt-identifiers-note-head { width: 35% }
+          </style>
+          <th id="alt-identifiers-type-head">
             <?php echo __('Type'); ?>
           </th>
-          <th id="alt-identifiers-identifier-head" style="width: 35%">
+          <th id="alt-identifiers-identifier-head">
             <?php echo __('Identifier'); ?>
           </th>
-          <th id="alt-identifiers-note-head" style="width: 35%">
+          <th id="alt-identifiers-note-head">
             <?php echo __('Notes'); ?>
           </th>
           <th>
