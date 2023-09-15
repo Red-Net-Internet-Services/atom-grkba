@@ -6,10 +6,13 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-        <th id="occupations-occupation-head" style="width: 50%">
+	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+              #occupations-occupation-head, #occupations-content-head { width: 50% }
+        </style>
+        <th id="occupations-occupation-head">
           <?php echo __('Occupation'); ?>
         </th>
-        <th id="occupations-content-head" style="width: 50%">
+        <th id="occupations-content-head">
           <?php echo __('Note'); ?>
         </th>
         <th>

@@ -16,20 +16,25 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 25%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+	      #isaar-relation-category-head, #isaar-relation-type-head, #isaar-relation-dates-head  { width: 15% }
+	      #isaar-relation-name-head { width: 25% }
+	      #isaar-relation-description-head { width: 30% }
+          </style>
+          <th name="isaar-relation-name-head">
             <?php echo __('Name'); ?>
           </th>
-          <th style="width: 15%">
+          <th id="isaar-relation-category-head">
             <?php echo __('Category'); ?>
           </th>
-          <th style="width: 15%">
+          <th id="isaar-relation-type-head">
             <?php echo __('Type'); ?>
           </th>
-          <th style="width: 15%">
+          <th id="isaar-relation-dates-head">
             <?php echo __('Dates'); ?>
           </th>
-          <th style="width: 30%">
+          <th id="isaar-relation-description-head">
             <?php echo __('Description'); ?>
           </th>
           <th>

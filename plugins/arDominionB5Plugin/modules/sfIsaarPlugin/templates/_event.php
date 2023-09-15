@@ -24,14 +24,18 @@
   <div class="table-responsive">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 40%">
+	<tr>
+          <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+              #isaar-related-resource-title-head { width: 40% }
+              #isaar-related-resource-relationship-head, #isaar-related-resource-dates-head, { width: 30% }
+	  </style>
+          <th id="isaar-related-resource-title-head">
             <?php echo __('Title'); ?>
           </th>
-          <th style="width: 30%">
+          <th id="isaar-related-resource-relationship-head">
             <?php echo __('Relationship'); ?>
           </th>
-          <th style="width: 30%">
+          <th id="isaar-related-resource-dates-head">
             <?php echo __('Dates'); ?>
           </th>
           <th>
