@@ -6,15 +6,22 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-        <?php if ($hiddenType) { ?>
-          <th id="<?php echo $arrayName; ?>-content-head" style="width: 100%">
+	<?php if ($hiddenType) { ?>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #<?php echo $arrayName; ?>-content-head { width: 100% }
+          </style>
+          <th id="<?php echo $arrayName; ?>-content-head">
             <?php echo __('Content'); ?>
           </th>
-        <?php } else { ?>
-          <th id="<?php echo $arrayName; ?>-content-head" style="width: 70%">
+	<?php } else { ?>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+	    #<?php echo $arrayName; ?>-content-head { width: 70% }
+	    #<?php echo $arrayName; ?>-type-head { width: 30%}
+          </style>
+          <th id="<?php echo $arrayName; ?>-content-head">
             <?php echo __('Content'); ?>
           </th>
-          <th id="<?php echo $arrayName; ?>-type-head" style="width: 30%">
+          <th id="<?php echo $arrayName; ?>-type-head">
             <?php echo __('Type'); ?>
           </th>
         <?php } ?>
