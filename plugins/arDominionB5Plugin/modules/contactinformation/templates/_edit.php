@@ -16,11 +16,15 @@
   <div class="table-responsive">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 80%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #contact-information-person-head { width: 80% }
+            #contact-information-primary-head { width: 20% }
+          </style>
+          <th id="contact-information-person-head">
             <?php echo __('Contact person'); ?>
           </th>
-          <th style="width: 20%">
+          <th id="contact-information-primary-head">
             <?php echo __('Primary'); ?>
           </th>
           <th>
