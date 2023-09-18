@@ -15,17 +15,21 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 30%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #isdf-function-name-head, #isdf-function-description-head { width: 30% }
+            #isdf-function-category-head, #isdf-function-dates-head { width: 20% }
+          </style>
+          <th id="isdf-function-name-head">
             <?php echo __('Name'); ?>
           </th>
-          <th style="width: 20%">
+          <th id="isdf-function-category-head">
             <?php echo __('Category'); ?>
           </th>
-          <th style="width: 30%">
+          <th id="isdf-function-description-head">
             <?php echo __('Description'); ?>
           </th>
-          <th style="width: 20%">
+          <th id="isdf-function-dates-head">
             <?php echo __('Dates'); ?>
           </th>
           <th>

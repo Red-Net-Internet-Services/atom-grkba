@@ -15,14 +15,18 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 30%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #isdf-authority-name-head, #isdf-authority-dates-head { width: 30% }
+	    #isdf-authority-relationship-head { width: 40% }
+          </style>
+          <th id="isdf-authority-name-head">
             <?php echo __('Identifier/name'); ?>
           </th>
-          <th style="width: 40%">
+          <th id="isdf-authority-relationship-head">
             <?php echo __('Nature of relationship'); ?>
           </th>
-          <th style="width: 30%">
+          <th id="isdf-authority-dates-head">
             <?php echo __('Dates'); ?>
           </th>
           <th>
