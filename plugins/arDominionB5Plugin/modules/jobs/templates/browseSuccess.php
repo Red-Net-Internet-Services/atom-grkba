@@ -33,13 +33,19 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead>
-        <tr>
-          <th style="width: 15%"><?php echo __('Start date'); ?></th>
-          <th style="width: 15%"><?php echo __('End date'); ?></th>
-          <th style="width: 20%"><?php echo __('Job name'); ?></th>
-          <th style="width: 10%"><?php echo __('Job status'); ?></th>
-          <th style="width: 30%"><?php echo __('Info'); ?></th>
-          <th style="width: 10%"><?php echo __('User'); ?></th>
+	<tr>
+   	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #job-start-date-head, #job-end-date-head { width: 15% }
+            #job-name-head { width: 20% }
+	    #job-status-head, #job-user-head { width: 10% }
+	    #job-info-head { width: 30% }
+          </style>
+          <th id="job-start-date-head"><?php echo __('Start date'); ?></th>
+          <th id="job-end-date-head"><?php echo __('End date'); ?></th>
+          <th id="job-name-head"><?php echo __('Job name'); ?></th>
+          <th id="job-status-head"><?php echo __('Job status'); ?></th>
+          <th id="job-info-head"><?php echo __('Info'); ?></th>
+          <th id="job-user-head"><?php echo __('User'); ?></th>
         </tr>
       </thead>
 
