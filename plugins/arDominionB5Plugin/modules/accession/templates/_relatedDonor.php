@@ -15,8 +15,11 @@
   <div class="table-responsive">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 100%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #related-donor-name-head { width: 100% }
+          </style>
+          <th id="related-donor-name-head">
             <?php echo __('Name'); ?>
           </th>
           <th>
