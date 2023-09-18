@@ -25,8 +25,11 @@
       </thead>
       <tbody>
         <?php foreach ($menuTree as $item) { ?>
-          <tr>
-            <td<?php if (QubitMenu::ROOT_ID == $item['parentId']) { ?> style="font-weight: bold"<?php } ?>>
+	  <tr>
+	    <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+                .parent-item-data { font-weight : bold }
+            </style>
+            <td<?php if (QubitMenu::ROOT_ID == $item['parentId']) { ?> class="parent-item-data"<?php } ?>>
 
               <?php echo str_repeat('&nbsp;&nbsp;', ($item['depth'] - 1)); ?>
 
