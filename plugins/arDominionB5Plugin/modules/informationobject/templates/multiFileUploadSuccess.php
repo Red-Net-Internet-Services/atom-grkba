@@ -78,10 +78,13 @@
       data-multifileupload-i18n-no-successful-files-error="<?php echo __('Files not uploaded successfully. Please retry.'); ?>"
       data-multifileupload-i18n-post-size-error="<?php echo __('Upload limit of %{maxPostSize} MB reached. Unable to add additional files.'); ?>"
       data-multifileupload-i18n-alert-close="<?php echo __('Close'); ?>">
+	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+       	  #multiFileUploadForm { display: inline }
+        </style>
 
       <?php echo $form->renderGlobalErrors(); ?>
 
-      <?php echo $form->renderFormTag(url_for([$resource, 'module' => 'informationobject', 'action' => 'multiFileUpload']), ['id' => 'multiFileUploadForm', 'style' => 'inline']); ?>
+      <?php echo $form->renderFormTag(url_for([$resource, 'module' => 'informationobject', 'action' => 'multiFileUpload']), ['id' => 'multiFileUploadForm']); ?>
 
         <?php echo $form->renderHiddenFields(); ?>
 
@@ -93,7 +96,10 @@
               </button>
             </h2>
             <div id="upload-collapse" class="accordion-collapse collapse show" aria-labelledby="upload-heading">
-              <div class="accordion-body">
+	      <div class="accordion-body">
+		<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+                  #uiElements { display: inline }
+            	</style>
                 <div class="alert alert-info" role="alert">
                   <p><?php echo __('Add your digital objects by dragging and dropping local files into the pane below, or by clicking the browse link to open your local file explorer.'); ?></p>
                   <p><?php echo __('The Title and Level of description values entered on this page will be applied to each child description created for the associated digital objects - \'%dd%\' represents an incrementing 2-value number, so by default descriptions created via this uploader will be named image 01, image 02, etc.'); ?></p>
@@ -115,7 +121,7 @@
 
                 <div id="uploads"></div>
 
-                <div id="uiElements" style="display: inline;">
+                <div id="uiElements">
                   <div id="uploaderContainer">
                     <div class="uppy-dashboard"></div>
                   </div>
