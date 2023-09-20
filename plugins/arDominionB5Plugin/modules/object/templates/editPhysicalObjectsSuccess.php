@@ -27,8 +27,11 @@
       <div class="table-responsive mb-3">
         <table class="table table-bordered mb-0">
           <thead>
-            <tr>
-              <th style="width: 100%;">
+	    <tr>
+	      <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          	#physical-object-containers-head { width: 100% }
+              </style>
+              <th id="physical-object-containers-head">
                 <?php echo __('Containers'); ?>
               </th>
               <th>

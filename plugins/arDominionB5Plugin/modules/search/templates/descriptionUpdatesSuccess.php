@@ -103,35 +103,40 @@
 
       <table class="table table-bordered mb-0">
         <thead>
-          <tr>
+	  <tr>
+	    <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          	#desc-update-name-1-head, #desc-update-name-2-head, #desc-update-repo-head, #desc-update-taxonomy-head { width: 40% }
+		#desc-update-name-3-head { width: 80% }
+		#desc-update-updated-head, #desc-update-created-head { width: 20% }
+            </style>
             <?php if (
                 'QubitInformationObject' == $className
                 && 0 < sfConfig::get('app_multi_repository')
             ) { ?>
-              <th style="width: 40%">
+              <th id="desc-update-name-1-head">
                 <?php echo __($nameColumnDisplay); ?>
               </th>
-              <th style="width: 40%">
+              <th id="desc-update-repo-head,">
                 <?php echo __('Repository'); ?>
               </th>
             <?php } elseif ('QubitTerm' == $className) { ?>
-              <th style="width: 40%">
+              <th id="desc-update-name-2-head">
                 <?php echo __($nameColumnDisplay); ?>
               </th>
-              <th style="width: 40%">
+              <th id="desc-update-taxonomy-head">
                 <?php echo __('Taxonomy'); ?>
               </th>
             <?php } else { ?>
-              <th style="width: 80%">
+              <th id="desc-update-name-3-head">
                 <?php echo __($nameColumnDisplay); ?>
               </th>
             <?php } ?>
             <?php if ('CREATED_AT' != $form->getValue('dateOf')) { ?>
-              <th style="width: 20%">
+              <th id="desc-update-updated-head">
                 <?php echo __('Updated'); ?>
               </th>
             <?php } else { ?>
-              <th style="width: 20%">
+              <th id="desc-update-created-head">
                 <?php echo __('Created'); ?>
               </th>
             <?php } ?>

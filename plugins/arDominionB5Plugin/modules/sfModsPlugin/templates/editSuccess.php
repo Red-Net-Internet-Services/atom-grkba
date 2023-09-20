@@ -73,11 +73,15 @@
             <div class="table-responsive mb-2">
               <table class="table table-bordered mb-0 multi-row">
                 <thead class="table-light">
-                  <tr>
-                    <th id="child-identifier-head" style="width: 20%">
+		  <tr>
+		    <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          		#child-identifier-head { width: 20% }
+		  	#child-title-head { width: 80% }
+        	    </style>
+                    <th id="child-identifier-head">
                       <?php echo __('Identifier'); ?>
                     </th>
-                    <th id="child-title-head" style="width: 80%">
+                    <th id="child-title-head">
                       <?php echo __('Title'); ?>
                     </th>
                     <th>

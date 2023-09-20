@@ -11,17 +11,22 @@
   <div class="table-responsive mb-3">
     <table class="table table-bordered mb-0">
       <thead class="table-light">
-        <tr>
-          <th style="width: 30%">
+	<tr>
+	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+            #info-obj-event-name-head { width: 30% }
+	    #info-obj-event-role-head { width: 20% }
+	    #info-obj-event-dates-head, #info-obj-event-place-head { width: 25% }
+          </style>
+          <th id="info-obj-event-name-head">
             <?php echo __('Name'); ?>
           </th>
-          <th style="width: 20%">
+          <th id="info-obj-event-role-head">
             <?php echo __('Role/event'); ?>
           </th>
-          <th style="width: 25%">
+          <th id="info-obj-event-place-head">
             <?php echo __('Place'); ?>
           </th>
-          <th style="width: 25%">
+          <th id="info-obj-event-dates-head">
             <?php echo __('Date(s)'); ?>
           </th>
           <th>

@@ -2,7 +2,11 @@
   <table class="table table-bordered mb-0">
     <thead>
       <tr>
-        <th class="sortable" style="width: 40%">
+	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          #browse-table-name-head { width: 40% }
+          #browse-table-region-head, #browse-table-locality-head, #browse-table-thematic-head { width: 20% }
+        </style>
+        <th class="sortable" id="browse-table-name-head">
           <?php echo link_to(__('Name'), ['sort' => ('nameUp' == $sf_request->sort) ? 'nameDown' : 'nameUp'] +
                             $sf_data->getRaw('sf_request')->getParameterHolder()->getAll(),
                             ['title' => __('Sort'), 'class' => 'sortable']); ?>
@@ -14,7 +18,7 @@
           <?php } ?>
         </th>
 
-        <th class="sortable" style="width: 20%">
+        <th class="sortable" id="browse-table-region-head">
           <?php echo link_to(__('Region'), ['sort' => ('regionUp' == $sf_request->sort) ? 'regionDown' : 'regionUp'] +
                             $sf_data->getRaw('sf_request')->getParameterHolder()->getAll(),
                             ['title' => __('Sort'), 'class' => 'sortable']); ?>
@@ -26,7 +30,7 @@
           <?php } ?>
         </th>
 
-        <th class="sortable" style="width: 20%">
+        <th class="sortable" id="browse-table-locality-head">
           <?php echo link_to(__('Locality'), ['sort' => ('localityUp' == $sf_request->sort) ? 'localityDown' : 'localityUp'] +
                             $sf_data->getRaw('sf_request')->getParameterHolder()->getAll(),
                             ['title' => __('Sort'), 'class' => 'sortable']); ?>
@@ -38,7 +42,7 @@
           <?php } ?>
         </th>
 
-        <th style="width: 20%">
+        <th id="browse-table-thematic-head">
           <?php echo __('Thematic area'); ?>
         </th>
 
