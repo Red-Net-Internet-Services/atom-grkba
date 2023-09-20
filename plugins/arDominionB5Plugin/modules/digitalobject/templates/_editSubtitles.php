@@ -18,14 +18,19 @@
       <div class="table-responsive mb-3">
         <table class="table table-bordered mb-0">
           <thead class="table-light">
-            <tr>
-              <th style="width: 30%">
+	    <tr>
+	      <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
+          	#do-language-head { width: 30% }
+		#do-filename-head { width: 50% }
+		#do-filesize-head { width: 20% }
+              </style>
+              <th id="do-language-head">
                 <?php echo __('Language'); ?>
               </th>
-              <th style="width: 50%">
+              <th id="do-filename-head">
                 <?php echo __('Filename'); ?>
               </th>
-              <th style="width: 20%">
+              <th id="do-filesize-head">
                 <?php echo __('Filesize'); ?>
               </th>
               <th>
