@@ -133,7 +133,7 @@
 <!-- Action buttons -->
 <ul class="actions mb-3 nav gap-2">
   <li>
-    <a class="btn atom-btn-outline-light" onClick="window.location.reload()" href="#">
+    <a class="btn atom-btn-outline-light" id="jobs-refresh-button" href="#">
       <i class="fas fa-sync-alt me-1" aria-hidden="true"></i>
       <?php echo __('Refresh'); ?>
     </a>
@@ -161,7 +161,7 @@
 
 <!-- Refresh after specified interval if auto-refresh enabled -->
 <?php if ($autoRefresh) { ?>
-  <script>
+  <script <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
     setTimeout(function() {
       window.location.reload(1);
     }, <?php echo $refreshInterval; ?>);
