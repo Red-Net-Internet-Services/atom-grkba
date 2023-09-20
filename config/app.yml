@@ -67,4 +67,4 @@ all:
       # 'Content-Security-Policy-Report-Only' or 'Content-Security-Policy'
       response_header: Content-Security-Policy-Report-Only
       # Configure CSP response directives.
-      directives: default-src 'self'; font-src 'self'; img-src 'self' https://www.gravatar.com/avatar/ data:; script-src 'self'; style-src 'self' 'nonce'; frame-ancestors 'self';
+      directives: default-src 'self'; font-src 'self'; img-src 'self' https://www.gravatar.com/avatar/ data:; script-src 'self'; style-src 'self' 'nonce'; worker-src 'self' blob:; frame-ancestors 'self';
