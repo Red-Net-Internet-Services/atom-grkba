@@ -25,17 +25,13 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-          <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-              #isaar-related-resource-title-head { width: 40% }
-              #isaar-related-resource-relationship-head, #isaar-related-resource-dates-head, { width: 30% }
-	  </style>
-          <th id="isaar-related-resource-title-head">
+          <th class="w-40">
             <?php echo __('Title'); ?>
           </th>
-          <th id="isaar-related-resource-relationship-head">
+          <th class="w-30">
             <?php echo __('Relationship'); ?>
           </th>
-          <th id="isaar-related-resource-dates-head">
+          <th class="w-30">
             <?php echo __('Dates'); ?>
           </th>
           <th>

@@ -6,14 +6,10 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-       	  #dc-names-actor-head { width: 60% }
-	  #dc-names-type-head { width: 40% }
-	</style>
-        <th id="dc-names-actor-head">
+        <th class="w-60">
           <?php echo __('Actor name'); ?>
         </th>
-        <th id="dc-names-type-head">
+        <th class="w-40">
           <?php echo __('Type'); ?>
         </th>
         <th>

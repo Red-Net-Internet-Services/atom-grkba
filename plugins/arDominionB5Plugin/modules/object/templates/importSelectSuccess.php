@@ -89,10 +89,7 @@
               <?php } ?>
 
 	      <div class="form-item">
-		<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-          	  #matchingOptions { display: none }
-        	</style>
-                <div class="panel panel-default" id="matchingOptions">
+                <div class="panel panel-default d-none">
                   <div class="panel-body">
                     <div class="mb-3 form-check">
                       <input class="form-check-input" name="skipUnmatched" id="skip-unmatched-input" type="checkbox"/>

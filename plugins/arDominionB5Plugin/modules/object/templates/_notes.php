@@ -7,21 +7,14 @@
     <thead class="table-light">
       <tr>
 	<?php if ($hiddenType) { ?>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-            #<?php echo $arrayName; ?>-content-head { width: 100% }
-          </style>
-          <th id="<?php echo $arrayName; ?>-content-head">
+          <th id="<?php echo $arrayName; ?>-content-head" class="w-100">
             <?php echo __('Content'); ?>
           </th>
 	<?php } else { ?>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-	    #<?php echo $arrayName; ?>-content-head { width: 70% }
-	    #<?php echo $arrayName; ?>-type-head { width: 30%}
-          </style>
-          <th id="<?php echo $arrayName; ?>-content-head">
+          <th id="<?php echo $arrayName; ?>-content-head" class="w-70">
             <?php echo __('Content'); ?>
           </th>
-          <th id="<?php echo $arrayName; ?>-type-head">
+          <th id="<?php echo $arrayName; ?>-type-head" class="w-30">
             <?php echo __('Type'); ?>
           </th>
         <?php } ?>

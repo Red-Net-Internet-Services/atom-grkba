@@ -17,24 +17,19 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-	      #isaar-relation-category-head, #isaar-relation-type-head, #isaar-relation-dates-head  { width: 15% }
-	      #isaar-relation-name-head { width: 25% }
-	      #isaar-relation-description-head { width: 30% }
-          </style>
-          <th name="isaar-relation-name-head">
+          <th class="w-25">
             <?php echo __('Name'); ?>
           </th>
-          <th id="isaar-relation-category-head">
+          <th class="w-15">
             <?php echo __('Category'); ?>
           </th>
-          <th id="isaar-relation-type-head">
+          <th class="w-15">
             <?php echo __('Type'); ?>
           </th>
-          <th id="isaar-relation-dates-head">
+          <th class="w-15">
             <?php echo __('Dates'); ?>
           </th>
-          <th id="isaar-relation-description-head">
+          <th class="w-30">
             <?php echo __('Description'); ?>
           </th>
           <th>

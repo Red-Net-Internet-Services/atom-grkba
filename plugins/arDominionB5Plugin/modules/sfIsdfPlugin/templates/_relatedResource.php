@@ -16,17 +16,13 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-            #isdf-resource-title-head, #isdf-resource-dates-head { width: 30% }
-	    #isdf-resource-relationship-head { width: 40% }
-          </style>
-          <th id="isdf-resource-title-head">
+          <th class="w-30">
             <?php echo __('Identifier/title'); ?>
           </th>
-          <th id="isdf-resource-relationship-head">
+          <th class="w-40">
             <?php echo __('Nature of relationship'); ?>
           </th>
-          <th id="isdf-resource-dates-head">
+          <th class="w-30">
             <?php echo __('Dates'); ?>
           </th>
           <th>

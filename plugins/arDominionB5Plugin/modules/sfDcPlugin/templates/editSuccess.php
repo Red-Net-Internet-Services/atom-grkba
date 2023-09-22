@@ -96,14 +96,10 @@
               <table class="table table-bordered mb-0 multi-row">
                 <thead class="table-light">
 		  <tr>
-		    <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-                      #child-identifier-head { width: 20% }
-		      #child-title-head { width: 80% }
-                    </style>
-                    <th id="child-identifier-head">
+                    <th class="w-20">
                       <?php echo __('Identifier'); ?>
                     </th>
-                    <th id="child-title-head">
+                    <th class="w-80">
                       <?php echo __('Title'); ?>
                     </th>
                     <th>

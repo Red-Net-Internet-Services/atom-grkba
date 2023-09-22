@@ -6,17 +6,13 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-          #dc-dates-start-head, #dc-dates-end-head { width: 30% }
-	  #dc-dates-date-head { width: 40% }
-        </style>
-        <th id="dc-dates-date-head">
+        <th class="w-40">
           <?php echo __('Date'); ?>
         </th>
-        <th id="dc-dates-start-head">
+        <th class="w-30">
           <?php echo __('Start'); ?>
         </th>
-        <th id="dc-dates-end-head">
+        <th class="w-30">
           <?php echo __('End'); ?>
         </th>
         <th>

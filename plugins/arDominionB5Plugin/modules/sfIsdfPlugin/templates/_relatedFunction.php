@@ -16,20 +16,16 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-            #isdf-function-name-head, #isdf-function-description-head { width: 30% }
-            #isdf-function-category-head, #isdf-function-dates-head { width: 20% }
-          </style>
-          <th id="isdf-function-name-head">
+          <th class="w-30">
             <?php echo __('Name'); ?>
           </th>
-          <th id="isdf-function-category-head">
+          <th class="w-20">
             <?php echo __('Category'); ?>
           </th>
-          <th id="isdf-function-description-head">
+          <th class="w-30">
             <?php echo __('Description'); ?>
           </th>
-          <th id="isdf-function-dates-head">
+          <th class="w-20">
             <?php echo __('Dates'); ?>
           </th>
           <th>

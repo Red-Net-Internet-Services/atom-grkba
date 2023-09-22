@@ -29,9 +29,6 @@
         </h2>
         <div id="rename-collapse" class="accordion-collapse collapse show" aria-labelledby="rename-heading">
 	  <div class="accordion-body">
-	    <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-              #rename-slug-warning { display: none }
-            </style>
             <p><?php echo __('Use this interface to update the description title, slug (permalink), and/or %1% filename.', ['%1%' => mb_strtolower(sfConfig::get('app_ui_label_digitalobject'))]); ?></p>
             <hr />
 
@@ -47,7 +44,7 @@
             <p><?php echo __('Original title'); ?>: <em><?php echo $resource->title; ?></em></p>
             <hr />
 
-            <div id="rename-slug-warning" class="alert alert-danger" role="alert">
+            <div id="rename-slug-warning" class="alert alert-danger d-none" role="alert">
               <?php echo __('A slug based on this title already exists so a number has been added to pad the slug.'); ?>
             </div>
             <div class="rename-form-field-toggle form-check mb-4">

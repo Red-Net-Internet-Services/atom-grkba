@@ -17,14 +17,10 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-            #contact-information-person-head { width: 80% }
-            #contact-information-primary-head { width: 20% }
-          </style>
-          <th id="contact-information-person-head">
+          <th class="w-80">
             <?php echo __('Contact person'); ?>
           </th>
-          <th id="contact-information-primary-head">
+          <th class="w-20">
             <?php echo __('Primary'); ?>
           </th>
           <th>
