@@ -78,13 +78,10 @@
       data-multifileupload-i18n-no-successful-files-error="<?php echo __('Files not uploaded successfully. Please retry.'); ?>"
       data-multifileupload-i18n-post-size-error="<?php echo __('Upload limit of %{maxPostSize} MB reached. Unable to add additional files.'); ?>"
       data-multifileupload-i18n-alert-close="<?php echo __('Close'); ?>">
-	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-       	  #multiFileUploadForm { display: inline }
-        </style>
 
       <?php echo $form->renderGlobalErrors(); ?>
 
-      <?php echo $form->renderFormTag(url_for([$resource, 'module' => 'informationobject', 'action' => 'multiFileUpload']), ['id' => 'multiFileUploadForm']); ?>
+      <?php echo $form->renderFormTag(url_for([$resource, 'module' => 'informationobject', 'action' => 'multiFileUpload']), ['id' => 'multiFileUploadForm', 'class' => 'd-inline']); ?>
 
         <?php echo $form->renderHiddenFields(); ?>
 

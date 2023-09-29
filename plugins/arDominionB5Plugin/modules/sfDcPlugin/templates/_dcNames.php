@@ -6,10 +6,10 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-        <th class="w-60">
+        <th id="dc-names-actor-head" class="w-60">
           <?php echo __('Actor name'); ?>
         </th>
-        <th class="w-40">
+        <th id="dc-names-type-head" class="w-40">
           <?php echo __('Type'); ?>
         </th>
         <th>

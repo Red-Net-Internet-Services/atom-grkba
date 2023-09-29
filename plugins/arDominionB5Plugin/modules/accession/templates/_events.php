@@ -6,14 +6,10 @@
   <table class="table table-bordered mb-0 multi-row">
     <thead class="table-light">
       <tr>
-	<style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-          #accession-events-type-head { width: 20% }
-          #accession-events-date-head { width: 25% }
-        </style>
-        <th id="accession-events-type-head">
+        <th id="accession-events-type-head" class="w-20">
           <?php echo __('Type'); ?>
         </th>
-        <th id="accession-events-date-head">
+        <th id="accession-events-date-head" class="w-25">
           <?php echo __('Date'); ?>
         </th>
         <th id="accession-events-agent-head">

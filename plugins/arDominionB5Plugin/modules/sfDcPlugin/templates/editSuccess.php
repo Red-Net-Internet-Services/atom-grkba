@@ -96,10 +96,10 @@
               <table class="table table-bordered mb-0 multi-row">
                 <thead class="table-light">
 		  <tr>
-                    <th class="w-20">
+                    <th id="child-identifier-head" class="w-20">
                       <?php echo __('Identifier'); ?>
                     </th>
-                    <th class="w-80">
+                    <th id="child-title-head" class="w-80">
                       <?php echo __('Title'); ?>
                     </th>
                     <th>

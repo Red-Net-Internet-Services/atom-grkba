@@ -16,10 +16,7 @@
     <table class="table table-bordered mb-0">
       <thead class="table-light">
 	<tr>
-	  <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-            #related-donor-name-head { width: 100% }
-          </style>
-          <th id="related-donor-name-head">
+          <th class="w-100">
             <?php echo __('Name'); ?>
           </th>
           <th>

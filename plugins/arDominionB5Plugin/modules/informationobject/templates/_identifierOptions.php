@@ -47,13 +47,10 @@
       <table class="table table-bordered mb-0 multi-row">
         <thead class="table-light">
           <tr>
-            <style <?php echo __(sfConfig::get('csp_nonce', '')); ?>>
-              #alt-identifiers-label-head, #alt-identifiers-identifier-head { width: 50% }
-            </style>
-            <th id="alt-identifiers-label-head">
+            <th id="alt-identifiers-label-head" class="w-50">
               <?php echo __('Label'); ?>
             </th>
-            <th id="alt-identifiers-identifier-head">
+            <th id="alt-identifiers-identifier-head" class="w-50"> 
               <?php echo __('Identifier'); ?>
             </th>
             <th>
