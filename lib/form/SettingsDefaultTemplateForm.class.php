@@ -48,6 +48,9 @@ class SettingsDefaultTemplateForm extends sfForm
         if ($configuration->isPluginEnabled('arDacsPlugin')) {
             $informationObjectTemplates['dacs'] = $i18n->__('DACS, 2nd ed. Society of American Archivists');
         }
+        if ($configuration->isPluginEnabled('sfAmsKaireiosPlugin')) {
+            $informationObjectTemplates['grkba'] = $i18n->__('Custom Standard, Kaireios Archive');
+        }
 
         $actorTemplates = [
             'isaar' => $i18n->__('ISAAR(CPF), 2nd ed. International Council on Archives'),

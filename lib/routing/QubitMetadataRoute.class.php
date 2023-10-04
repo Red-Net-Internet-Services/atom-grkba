@@ -30,6 +30,7 @@ class QubitMetadataRoute extends QubitRoute
         'mods' => 'sfModsPlugin',
         'dacs' => 'arDacsPlugin',
         'isdf' => 'sfIsdfPlugin',
+        'grkba' => 'sfAmsKaireiosPlugin',
     ];
     public static $DEFAULT_MODULES = [
         'informationobject' => false,
@@ -144,7 +145,7 @@ class QubitMetadataRoute extends QubitRoute
                         $default = $defaultSetting;
                     }
 
-                    $parameters['module'] = $this->getActionParameter(['isad', 'dc', 'mods', 'rad', 'ead', 'dacs'], $default, $parameters);
+                    $parameters['module'] = $this->getActionParameter(['isad', 'dc', 'mods', 'rad', 'ead', 'dacs', 'grkba'], $default, $parameters);
 
                     break;
 

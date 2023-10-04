@@ -9,7 +9,7 @@
 
 <?php slot('title'); ?>
 
-  <?php echo get_component('informationobject', 'descriptionHeader', ['resource' => $resource, 'title' => (string) $dc, 'hideLevelOfDescription' => true]); ?>
+  <?php echo get_component('informationobject', 'descriptionHeader', ['resource' => $resource, 'title' => (string) $grkba, 'hideLevelOfDescription' => true]); ?>
 
   <?php if (isset($sf_request->source)) { ?>
     <div class="messages status">

@@ -326,6 +326,7 @@ class arInstall
             'sfModsPlugin',
             'sfRadPlugin',
             'sfSkosPlugin',
+            'sfAmsKaireiosPlugin',
         ]);
         $object->save();
 

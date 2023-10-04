@@ -69,6 +69,7 @@ class arMigration0094
                 'dc' => 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative',
                 'mods' => 'MODS, Version 3.3. U.S. Library of Congress',
                 'rad' => 'RAD, July 2008 version. Canadian Council of Archives',
+                'grkba' => 'Custom Standard, Kaireios Archive',
             ]
             as $key => $value
         ) {

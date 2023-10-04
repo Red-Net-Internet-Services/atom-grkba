@@ -5,18 +5,12 @@ editSuccess:
     /plugins/sfDrupalPlugin/vendor/drupal/misc/textarea:
     /vendor/yui/connection/connection-min:
     /vendor/yui/datasource/datasource-min:
-    /vendor/yui/container/container-min:
     /vendor/yui/autocomplete/autocomplete-min:
     /js/generateIdentifier.js:
     autocomplete:
     blank:
-    multiInstanceInput:
     multiRow:
     select:
-
-fileListSuccess:
-  javascripts:
-    /plugins/sfDrupalPlugin/vendor/drupal/misc/tableheader:
 
 indexSuccess:
   stylesheets:

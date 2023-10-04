@@ -45,12 +45,12 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
     {
         parent::earlyExecute();
 
-        $this->dc = new sfAmsKaireiosPlugin($this->resource);
+        $this->grkba = new sfAmsKaireiosPlugin($this->resource);
 
         $title = $this->context->i18n->__('Add new resource');
         if (isset($this->getRoute()->resource)) {
             if (1 > strlen($title = $this->resource->__toString())) {
-                $title = $this->context->i18n->__('Untitled');
+                $title = $this->context->i18n->__('New Entry');
             }
 
             $title = "Edit {$title}";
@@ -58,11 +58,11 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
 
         $this->response->setTitle("{$title} - {$this->response->getTitle()}");
 
-        $this->dcDatesComponent = new sfDcPluginDcDatesComponent($this->context, 'sfDcPlugin', 'dcDates');
+        $this->dcDatesComponent = new sfAmsKaireiosPluginDcDatesComponent($this->context, 'sfAmsKaireiosPlugin', 'dcDates');
         $this->dcDatesComponent->resource = $this->resource;
         $this->dcDatesComponent->execute($this->request);
 
-        $this->dcNamesComponent = new sfDcPluginDcNamesComponent($this->context, 'sfDcPlugin', 'dcNames');
+        $this->dcNamesComponent = new sfAmsKaireiosPluginDcNamesComponent($this->context, 'sfAmsKaireiosPlugin', 'dcNames');
         $this->dcNamesComponent->resource = $this->resource;
         $this->dcNamesComponent->execute($this->request);
     }

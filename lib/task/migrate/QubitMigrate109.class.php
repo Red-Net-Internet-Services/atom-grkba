@@ -441,6 +441,7 @@ class QubitMigrate109 extends QubitMigrate
             'isdiah' => 'ICA-ISDIAH 1st edition',
             'mods' => 'MODS version 3.3',
             'rad' => 'RAD version Jul2008',
+            'grkba' => 'Custom Standard AMS Kaireios',
         ];
 
         foreach ($this->data['QubitSetting'] as $key => $row) {

@@ -51,6 +51,7 @@
                     || ('sfRadPlugin' == $name && 'rad' == $defaultTemplate)
                     || ('sfDcPlugin' == $name && 'dc' == $defaultTemplate)
                     || ('sfModsPlugin' == $name && 'mods' == $defaultTemplate)
+                    || ('sfAmsKaireiosPlugin' == $name && 'grkba' == $defaultTemplate)
                 ) { ?>
                   disabled="disabled"
                 <?php } ?>

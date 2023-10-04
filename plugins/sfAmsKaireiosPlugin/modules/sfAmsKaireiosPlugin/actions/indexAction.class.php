@@ -22,16 +22,16 @@
  *
  * @author     Peter Van Garderen <peter@artefactual.com>
  */
-class sfAmsKaireiosIndexAction extends InformationObjectIndexAction
+class sfAmsKaireiosPluginIndexAction extends InformationObjectIndexAction
 {
     public function execute($request)
     {
         parent::execute($request);
 
-        $this->dc = new sfAmsKaireiosPlugin($this->resource);
+        $this->grkba = new sfAmsKaireiosPlugin($this->resource);
 
         if (1 > strlen($title = $this->resource->__toString())) {
-            $title = $this->context->i18n->__('Untitled');
+            $title = $this->context->i18n->__('New Entry');
         }
 
         $this->response->setTitle("{$title} - {$this->response->getTitle()}");
