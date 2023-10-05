@@ -28,6 +28,7 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
     public static $NAMES = [
         'accessConditions',
         'extentAndMedium',
+        'number',
         'identifier',
         'language',
         'locationOfOriginals',

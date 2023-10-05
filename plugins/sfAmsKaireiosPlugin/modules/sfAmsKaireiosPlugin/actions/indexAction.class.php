@@ -67,7 +67,7 @@ class sfAmsKaireiosPluginIndexAction extends InformationObjectIndexAction
             $validatorSchema->repository = new sfValidatorString(
                 ['required' => true],
                 ['required' => $this->context->i18n->__(
-                    '%1%Relation%2% (%3%isLocatedAt%4%) - This is a mandatory element for this resource or one of its higher descriptive levels (if part of a collection hierarchy).',
+                    '%1%Relation%2% (%3%Archival Institution%4%) - This is a mandatory element for this resource or one of its higher descriptive levels (if part of a collection hierarchy).',
                     [
                         '%1%' => '<a class="alert-link" href="http://dublincore.org/documents/dcmi-terms/#elements-relation">',
                         '%2%' => '</a>',
