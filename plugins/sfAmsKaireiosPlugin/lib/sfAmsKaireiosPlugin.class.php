@@ -25,6 +25,7 @@
 class sfAmsKaireiosPlugin implements ArrayAccess
 {
     protected $resource;
+    protected $property;
 
     public function __construct($resource)
     {
@@ -161,7 +162,44 @@ class sfAmsKaireiosPlugin implements ArrayAccess
                 return $type;
 
         }
-    } 
+    }
+
+    public function getProperty($name, $options = [])
+    {
+        switch ($name) {
+            case 'number':
+                return $this->property($name)->__get('value', $options);
+        }
+    }
+
+    public function setProperty($name, $value)
+    {
+        switch ($name) {
+            case 'number':
+                $this->property($name)->value = $value;
+
+                return $this;
+            }
+    }
+    protected function property($name)
+    {
+        if (!isset($this->property[$name])) {
+            $criteria = new Criteria();
+            $this->resource->addPropertysCriteria($criteria);
+            $criteria->add(QubitProperty::NAME, $name);
+
+            if (1 == count($query = QubitProperty::get($criteria))) {
+                $this->property[$name] = $query[0];
+            } else {
+                $this->property[$name] = new QubitProperty();
+                $this->property[$name]->name = $name;
+
+                $this->resource->propertys[] = $this->property[$name];
+            }
+        }
+
+        return $this->property[$name];
+    }
 
     public function offsetExists($offset)
     {

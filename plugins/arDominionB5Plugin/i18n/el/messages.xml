@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="en" target-language="el" datatype="plaintext" original="messages" date="2023-10-08T07:35:23Z" product-name="messages">
+  <file source-language="en" target-language="el" datatype="plaintext" original="messages" date="2023-10-08T10:28:06Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -142,7 +142,7 @@
       </trans-unit>
       <trans-unit id="35">
         <source>Delete row</source>
-        <target/>
+        <target>Διαγραφή γραμμής</target>
       </trans-unit>
       <trans-unit id="36">
         <source>Use these two fields to add lower levels to a collection-level description.</source>
@@ -734,7 +734,7 @@
       </trans-unit>
       <trans-unit id="183">
         <source>The name given to this resource.</source>
-        <target/>
+        <target>Το όνομα που δίνεται σε αυτόν τον πόρο.</target>
       </trans-unit>
       <trans-unit id="184">
         <source>The topic of the resource. Search for an existing term in the Subject taxonomy</source>
@@ -750,7 +750,7 @@
       </trans-unit>
       <trans-unit id="187">
         <source>&lt;p&gt;The file format, physical medium, or dimensions of the resource.&lt;/p&gt;&lt;p&gt;Please note: if this resource is linked to a digital object, the Internet Media Types (MIME) will be added automatically upon output, so don't duplicate those values here.&lt;/p&gt;</source>
-        <target/>
+        <target>&lt;p&gt;Η μορφή αρχείου, το φυσικό μέσο ή οι διαστάσεις του πόρου.&lt;/p&gt;&lt;p&gt;Παρακαλώ σημειώστε: εάν αυτός ο πόρος συνδέεται με ένα ψηφιακό αντικείμενο, οι Τύποι Μέσων Διαδικτύου (MIME) θα προστεθούν αυτόματα κατά την έξοδο, οπότε μην αναπαράγετε αυτές τις τιμές εδώ.&lt;/p&gt;</target>
       </trans-unit>
       <trans-unit id="188">
         <source>Format</source>
@@ -758,7 +758,7 @@
       </trans-unit>
       <trans-unit id="189">
         <source>Related material(s) from which this resource is derived.</source>
-        <target/>
+        <target>Σχετικό(-ά) υλικό(-α) από το οποίο προέρχεται αυτός ο πόρος.</target>
       </trans-unit>
       <trans-unit id="190">
         <source>Source</source>
@@ -810,7 +810,7 @@
       </trans-unit>
       <trans-unit id="202">
         <source>Identify and record the name(s) and type(s) of the unit of description.</source>
-        <target/>
+        <target>Προσδιορίστε και καταγράψτε το όνομα (τα ονόματα) και τον τύπο (τους τύπους) της περιγραφικής μονάδας.</target>
       </trans-unit>
       <trans-unit id="203">
         <source>Creator</source>
@@ -2310,7 +2310,7 @@
       </trans-unit>
       <trans-unit id="577">
         <source>Search and browse</source>
-        <target/>
+        <target>Αναζήτηση και περιήγηση</target>
       </trans-unit>
       <trans-unit id="578">
         <source>Presentation</source>
@@ -2318,7 +2318,7 @@
       </trans-unit>
       <trans-unit id="579">
         <source>Multi-repository</source>
-        <target/>
+        <target>Πολλαπλά αποθετήρια</target>
       </trans-unit>
       <trans-unit id="580">
         <source>Permalinks</source>
@@ -2330,7 +2330,7 @@
       </trans-unit>
       <trans-unit id="582">
         <source>Integrations</source>
-        <target/>
+        <target>Ενσωματώσεις</target>
       </trans-unit>
       <trans-unit id="583">
         <source>Clipboard settings</source>
@@ -5495,6 +5495,26 @@
       <trans-unit id="1373">
         <source>A slug based on this name already exists so a number has been added to pad the slug.</source>
         <target/>
+      </trans-unit>
+      <trans-unit id="1374">
+        <source>Number</source>
+        <target>Αριθμός</target>
+      </trans-unit>
+      <trans-unit id="1375">
+        <source>Context</source>
+        <target>Περιγραφή</target>
+      </trans-unit>
+      <trans-unit id="1376">
+        <source>Coverage</source>
+        <target>Γεωγραφική Κάλυψη</target>
+      </trans-unit>
+      <trans-unit id="1377">
+        <source>Relation (Archival Institution)</source>
+        <target>Σχέση (Αρχειακός Φορέας)</target>
+      </trans-unit>
+      <trans-unit id="1378">
+        <source>Keywords</source>
+        <target>Λέξεις Κλειδιά</target>
       </trans-unit>
     </body>
   </file>

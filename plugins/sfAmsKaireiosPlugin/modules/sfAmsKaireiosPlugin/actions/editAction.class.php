@@ -111,7 +111,7 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
         
                 break;
             case 'number':
-                $this->form->setDefault('number', $this->grkba->number);
+                $this->form->setDefault('number', $this->grkba->getProperty($name));
                 $this->form->setValidator('number', new sfValidatorString());
                 $this->form->setWidget('number', new sfWidgetFormTextarea());
             default:
@@ -173,7 +173,7 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
                 break;            
             
             case 'number':
-                $this->grkba->number = $this->form->getValue($field->getName());
+                $this->grkba->setProperty($field->getName(), $this->form->getValue($field->getName()));
                 break;
             default:
                 return parent::processField($field);
