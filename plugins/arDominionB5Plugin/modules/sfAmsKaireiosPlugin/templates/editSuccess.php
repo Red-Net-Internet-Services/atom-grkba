@@ -160,9 +160,9 @@
             <?php echo render_field($form->accessConditions
                 ->help(__('General Information about the context, the information object etc.'))
                 ->label(__('Notes')), $resource); ?>
-            <?php echo render_field($form->sheetNumber
+            <?php echo render_field($form->number
                 ->help(__('General Information about the context, the information object etc.'))
-                ->label(__('Sheet Number')), $resource); ?>
+                ->label(__('Number')), $grkba); ?>
 
             <?php
                 $taxonomy = QubitTaxonomy::getById(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);

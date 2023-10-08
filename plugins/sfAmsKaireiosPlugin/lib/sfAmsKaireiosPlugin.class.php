@@ -131,8 +131,8 @@ class sfAmsKaireiosPlugin implements ArrayAccess
 
                 return $keywords;
             case 'licenseNumber':
-            case 'sheetNumber':
-                // TODO
+            case 'number':
+                return $this->$grkba->number;
 
             case 'subject':
                 $subject = [];

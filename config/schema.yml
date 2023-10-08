@@ -306,7 +306,6 @@ propel:
     related_units_of_description: { phpName: relatedUnitsOfDescription, type: LONGVARCHAR, required: false }
     institution_responsible_identifier: { phpName: institutionResponsibleIdentifier, type: VARCHAR, size: '1024', required: false }
     rules: { phpName: rules, type: LONGVARCHAR, required: false }
-    sheet_number: { phpName: sheetNumber, type: LONGVARCHAR, required: false }
     sources: { phpName: sources, type: LONGVARCHAR, required: false }
     revision_history: { phpName: revisionHistory, type: LONGVARCHAR, required: false }
     id: { phpName: id, type: INTEGER, primaryKey: true, required: true, foreignTable: information_object, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }

@@ -119,7 +119,7 @@
   <?php echo render_show(__('Types'), $grkba->type); ?>
 
   <?php echo render_show(__('Format'), render_value($grkba->format)); ?>
-  <?php echo render_show(__('Sheet Number'), render_value($grkba->sheetNumber)); ?>
+  <?php echo render_show(__('Number'), render_value($grkba->_number)); ?>
 
   <?php echo render_show(__('Source'), render_value($resource->getLocationOfOriginals(['cultureFallback' => true]))); ?>
 

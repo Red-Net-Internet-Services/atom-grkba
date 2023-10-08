@@ -28,7 +28,7 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
     public static $NAMES = [
         'accessConditions',
         'extentAndMedium',
-        'sheetNumber',
+        'number',
         'keywords',
         'identifier',
         'language',
@@ -110,10 +110,10 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
                 $this->form->setWidget('keywords', new sfWidgetFormSelect(array('choices' => $choices, 'multiple' => true)));
         
                 break;
-            case 'sheetNumber':
-                $this->form->setDefault('sheetNumber', $this->grkba['sheetNumber']);
-                $this->form->setValidator('sheetNumber', new sfValidatorString());
-                $this->form->setWidget('sheetNumber', new sfWidgetFormInput());
+            case 'number':
+                $this->form->setDefault('number', $this->grkba->number);
+                $this->form->setValidator('number', new sfValidatorString());
+                $this->form->setWidget('number', new sfWidgetFormTextarea());
             default:
                 return parent::addField($name);
         }
@@ -171,7 +171,10 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
                 }
 
                 break;            
-
+            
+            case 'number':
+                $this->grkba->number = $this->form->getValue($field->getName());
+                break;
             default:
                 return parent::processField($field);
         }

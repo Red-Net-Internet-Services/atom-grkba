@@ -56,6 +56,9 @@ class arMigration0194
     $term->setName('Keywords note', array('culture' => 'en'));
     $term->save();
 
+    $sql = 'ALTER TABLE `information_object` ADD `number` INTEGER';
+    QubitPdo::modify($sql);
+
     return true;
   }
 }
