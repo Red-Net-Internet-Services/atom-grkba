@@ -122,6 +122,18 @@ class sfAmsKaireiosPlugin implements ArrayAccess
             case 'sourceCulture':
                 return $this->resource->sourceCulture;
 
+            case 'keywords':
+                $keywords = [];
+
+                foreach ($this->resource->getTermRelations(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID) as $item) {
+                    $keywords[] = $item->term;
+                }
+
+                return $keywords;
+            case 'licenseNumber':
+            case 'sheetNumber':
+                // TODO
+
             case 'subject':
                 $subject = [];
                 foreach ($this->resource->getSubjectAccessPoints() as $item) {
@@ -147,8 +159,9 @@ class sfAmsKaireiosPlugin implements ArrayAccess
                 }
 
                 return $type;
+
         }
-    }
+    } 
 
     public function offsetExists($offset)
     {

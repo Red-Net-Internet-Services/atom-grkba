@@ -28,7 +28,8 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
     public static $NAMES = [
         'accessConditions',
         'extentAndMedium',
-        'number',
+        'sheetNumber',
+        'keywords',
         'identifier',
         'language',
         'locationOfOriginals',
@@ -93,7 +94,26 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
                 $this->form->setWidget('type', new sfWidgetFormSelect(['choices' => $choices, 'multiple' => true]));
 
                 break;
-
+            case 'keywords':
+                $criteria = new Criteria;
+                $criteria->add(QubitObjectTermRelation::OBJECT_ID, $this->resource->id);
+                $criteria->addJoin(QubitObjectTermRelation::TERM_ID, QubitTerm::ID);
+                $criteria->add(QubitTerm::TAXONOMY_ID, QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);
+        
+                $value = $choices = [];
+                foreach ($this[$name] = QubitObjectTermRelation::get($criteria) as $item) {
+                    $choices[$value[] = $this->context->routing->generate(null, [$item->term, 'module' => 'term'])] = $item->term;
+                }
+        
+                $this->form->setDefault('keywords', $value);
+                $this->form->setValidator('keywords', new sfValidatorPass);        
+                $this->form->setWidget('keywords', new sfWidgetFormSelect(array('choices' => $choices, 'multiple' => true)));
+        
+                break;
+            case 'sheetNumber':
+                $this->form->setDefault('sheetNumber', $this->grkba['sheetNumber']);
+                $this->form->setValidator('sheetNumber', new sfValidatorString());
+                $this->form->setWidget('sheetNumber', new sfWidgetFormInput());
             default:
                 return parent::addField($name);
         }
@@ -126,6 +146,31 @@ class sfAmsKaireiosPluginEditAction extends InformationObjectEditAction
                 }
 
                 break;
+            case 'keywords':
+                $value = $filtered = [];
+                foreach ($this->form->getValue($field->getName()) as $item) {
+                    $params = $this->context->routing->parse(Qubit::pathInfo($item));
+                    $resource = $params['_sf_route']->resource;
+                    $value[$resource->id] = $filtered[$resource->id] = $resource;
+                }
+
+                foreach ($this[$field->getName()] as $item) {
+                    if (isset($value[$item->term->id])) {
+                        unset($filtered[$item->term->id]);
+                    } else {
+                        $item->indexObjectOnDelete = false;
+                        $item->delete();
+                    }
+                }
+
+                foreach ($filtered as $item) {
+                    $relation = new QubitObjectTermRelation();
+                    $relation->term = $item;
+
+                    $this->resource->objectTermRelationsRelatedByobjectId[] = $relation;
+                }
+
+                break;            
 
             default:
                 return parent::processField($field);

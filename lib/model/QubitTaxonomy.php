@@ -76,6 +76,8 @@ class QubitTaxonomy extends BaseTaxonomy
     public const USER_ACTION_ID = 81;
     public const ACCESSION_ALTERNATIVE_IDENTIFIER_TYPE_ID = 82;
     public const ACCESSION_EVENT_TYPE_ID = 83;
+    // Custom AMS number
+    public const GRKBA_AMS_KEYWORD_ID = 84;
 
     public $disableNestedSetUpdating = false;
 

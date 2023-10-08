@@ -179,7 +179,7 @@ class QubitMenu extends BaseMenu
             return 'informationobject/list' == $this->getPath();
         }
         // And even more hacks
-        if (in_array($currentModule, ['sfIsadPlugin', 'sfRadPlugin', 'sfDcPlugin', 'sfModsPlugin', 'arDacsPlugin'])) {
+        if (in_array($currentModule, ['sfIsadPlugin', 'sfRadPlugin', 'sfDcPlugin', 'sfModsPlugin', 'arDacsPlugin', 'sfAmsKaireiosPlugin'])) {
             return 'informationobject/list' == $this->getPath();
         }
 

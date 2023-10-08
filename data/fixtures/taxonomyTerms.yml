@@ -1380,6 +1380,13 @@ QubitTaxonomy:
       uz: 'AIP turlari'
       vi: 'Loại AIP'
       zh: 'AIP 类型'
+  QubitTaxonomy_grkba_ams_keywords:
+    source_culture: en
+    id: 84
+    parent_id: QubitTaxonomy_root
+    name:
+      en: 'Keywords'
+      el: 'Λέξεις Κλειδιά'
   QubitTaxonomy_thematic_areas:
     source_culture: en
     id: 72
@@ -1918,6 +1925,14 @@ QubitTerm:
       tr: 'Dil notu'
       vi: 'Ghi chú ngôn ngữ'
       zh: 语言说明
+  QubitTerm_grkba_ams_number_note:
+    taxonomy_id: QubitTaxonomy_7
+    parent_id: QubitTerm_110
+    id: 198
+    source_culture: en
+    name:
+      en: 'Keyword note'
+      el: 'Σημείωση Λέξης Κλειδί'
   QubitTerm_119:
     taxonomy_id: QubitTaxonomy_7
     parent_id: QubitTerm_110
@@ -9862,6 +9877,43 @@ QubitTerm:
       de_CH: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
       el: 'Dublin Core, Έκδοση 1.1. Dublin Core Metadata Initiative'
       en: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      es: 'Dublin Core, Versión 1.1 Iniciativa de Metadatos Dublin Core'
+      eu: 'Dublin Core, 1.1 bertsioa. Dublin Core Metadatuen Ekimena'
+      fr: 'Dublin Core, version 1.1, Inititative de métadonnées Dublin Core'
+      gl: 'Dublin Core, Versión 1.1 Iniciativa de Metadatos Dublin Core'
+      hr: 'Dublin Core, verzija 1.1. Dublin Core Metadata Initiative'
+      hu: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      id: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      it: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      ja: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      ka: 'დაბლინ კორ მეტამონაცემების ელემენტთა სიმრავლე, ვერსია 1.1 ის ინიციატივა'
+      ko: '더블린코어(Dublin Core) 1.1판. 더블린코어 메타데이터 이니시에이티브(DCMI)'
+      pl: 'Dublin Core, Wersja 1.1. Dublin Core Metadata Initiative'
+      pt: 'Dublin Core, Versão 1.1. Dublin Core Metadata Initiative'
+      pt_BR: 'Dublin Core, Versão 1.1. Dublin Core Metadata Initiative'
+      sl: 'Dublin Core, verzija 1.1., Iniciativa o metapodatkih Dublin Core (DCMI)'
+      sr: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      sv: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      vi: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      zh: '都柏林核心, 版本1.1. 都柏林核心元数据元素集'
+  QubitTerm_template_grkba:
+    taxonomy_id: 70
+    parent_id: QubitTerm_110
+    source_culture: en
+    code: grkba
+    name:
+      ar: 'دبلن كور، الإصدار 1.1. مبادرة دبلن الأساسية للبيانات الوصفية'
+      bs: 'Dublin Core, verzija 1.1. Dublin Core Metadata Initiative'
+      ca: 'Dublin Core, Versió 1.1. Dublin Core Metadata Initiative'
+      ca@valencia: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      cy: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      de: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      de-AT: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      de-CH: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      de_AT: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      de_CH: 'Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
+      el: 'Ειδικό Dublin Core, Έκδοση 1.1. Dublin Core Metadata Initiative'
+      en: 'Custom Dublin Core, Version 1.1. Dublin Core Metadata Initiative'
       es: 'Dublin Core, Versión 1.1 Iniciativa de Metadatos Dublin Core'
       eu: 'Dublin Core, 1.1 bertsioa. Dublin Core Metadatuen Ekimena'
       fr: 'Dublin Core, version 1.1, Inititative de métadonnées Dublin Core'

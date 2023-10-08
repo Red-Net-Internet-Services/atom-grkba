@@ -461,6 +461,40 @@ class QubitInformationObject extends BaseInformationObject
         ];
     }
 
+    public function setKeywordsByName($name)
+    {
+      // see if type term already exists
+      $criteria = new Criteria;
+      $criteria->addJoin(QubitTerm::ID, QubitTermI18n::ID);
+      $criteria->add(QubitTerm::TAXONOMY_ID, QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);
+      $criteria->add(QubitTermI18n::NAME, $name);
+  
+      if (null === $term = QubitTerm::getOne($criteria))
+      {
+        $term = new QubitTerm;
+        $term->setTaxonomyId(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);
+        $term->setName($name);
+        $term->setRoot();
+        $term->save();
+      }
+  
+      foreach (self::getTermRelations(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID) as $item)
+      {
+        // Faster than $item->term == $term
+        if ($item->termId == $term->id)
+        {
+          return;
+        }
+      }
+  
+      $this->addTermRelation($term->id);
+    }
+
+    public function getKeywords()
+    {
+        return $this->getTermRelations(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);
+    }
+
     public function setMaterialType($materialType)
     {
         // add the materialType to term list (assuming it's a new subject)

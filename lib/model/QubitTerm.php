@@ -149,6 +149,8 @@ class QubitTerm extends BaseTerm
     public const SUBTITLES_ID = 196;
     // Job error note
     public const JOB_ERROR_NOTE_ID = 197;
+    // Custom AMS number
+    public const GRKBA_AMS_KEYWORD_NOTE_ID = 198;
 
     public $disableNestedSetUpdating = false;
 
@@ -419,10 +421,16 @@ class QubitTerm extends BaseTerm
         return QubitTaxonomy::getTermsById(QubitTaxonomy::THEMATIC_AREA_ID, $options);
     }
 
+    public static function getKeywords($options = [])
+    {
+        return QubitTaxonomy::getTermsById(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID, $options);
+    }
+
     public static function getGeographicSubregions($options = [])
     {
         return QubitTaxonomy::getTermsById(QubitTaxonomy::GEOGRAPHIC_SUBREGION_ID, $options);
     }
+
 
     /**
      * Return a list of all Physical Object terms.

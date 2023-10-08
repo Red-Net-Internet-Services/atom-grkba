@@ -119,6 +119,7 @@
   <?php echo render_show(__('Types'), $grkba->type); ?>
 
   <?php echo render_show(__('Format'), render_value($grkba->format)); ?>
+  <?php echo render_show(__('Sheet Number'), render_value($grkba->sheetNumber)); ?>
 
   <?php echo render_show(__('Source'), render_value($resource->getLocationOfOriginals(['cultureFallback' => true]))); ?>
 
@@ -138,6 +139,14 @@
           $coverage[] = link_to(render_title($item), [$item, 'module' => 'term']);
       }
       echo render_show(__('Coverage (spatial)'), $coverage);
+  ?>
+
+  <?php
+      $keywords = [];
+      foreach ($resource->getKeywords() as $item) {
+          $keywords[] = link_to(render_title($item->term), [$item->term, 'module' => 'term']);
+      }
+      echo render_show(__('Keywords'), $keywords);
   ?>
 
   <?php echo render_show(__('Rights'), render_value($resource->getAccessConditions(['cultureFallback' => true]))); ?>

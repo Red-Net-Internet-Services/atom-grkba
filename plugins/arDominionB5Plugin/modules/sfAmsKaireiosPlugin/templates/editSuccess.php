@@ -160,6 +160,31 @@
             <?php echo render_field($form->accessConditions
                 ->help(__('General Information about the context, the information object etc.'))
                 ->label(__('Notes')), $resource); ?>
+            <?php echo render_field($form->sheetNumber
+                ->help(__('General Information about the context, the information object etc.'))
+                ->label(__('Sheet Number')), $resource); ?>
+
+            <?php
+                $taxonomy = QubitTaxonomy::getById(QubitTaxonomy::GRKBA_AMS_KEYWORD_ID);
+                $taxonomyUrl = url_for([$taxonomy, 'module' => 'taxonomy']);
+                $extraInputs = '<input class="list" type="hidden" value="'
+                    .url_for(['module' => 'term', 'action' => 'autocomplete', 'taxonomy' => $taxonomyUrl])
+                    .'">';
+                if (QubitAcl::check($taxonomy, 'createTerm')) {
+                    $extraInputs .= '<input class="add" type="hidden" data-link-existing="true" value="'
+                        .url_for(['module' => 'term', 'action' => 'add', 'taxonomy' => $taxonomyUrl])
+                        .' #name">';
+                }
+                echo render_field(
+                    $form->keywords->label(__('Keywords'))->help(__(
+                        '<p>Keywords</p>'
+                    )),
+                    null,
+                    ['class' => 'form-autocomplete', 'extraInputs' => $extraInputs]
+                );
+            ?>
+
+            
           </div>
         </div>
       </div>
